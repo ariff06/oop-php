@@ -1,11 +1,10 @@
 <?php
 
-class frog extends animal
-{
-    public $jump;
+require_once 'animal.php';
 
-    public  function jump() {
-        return $this -> jump = "Hop Hop";
+class Frog extends Animal {
+    public function jump() {
+        return "Hop Hop"; // nambahin atribut Jump, dengan suara Hop Hop
     }
 }
 

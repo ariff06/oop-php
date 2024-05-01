@@ -1,27 +1,29 @@
 <?php
-require 'animal.php';
-require 'frog.php';
-require 'ape.php';
 
-$sheep = new Animal();
-$sheep -> setName("shaun");
+require_once 'animal.php';
+require_once 'frog.php';
+require_once 'ape.php';
 
-echo "Name : ".$sheep -> getName()."<br>";
-echo "legs : ".$sheep -> legs."<br>";
-echo "cold blooded : ".$sheep -> cold_blooded()."<br><br>";
+$sheep = new Animal("shaun");
 
-$buduk = new frog();
-$buduk -> setName("Buduk");
+echo "Name: " . $sheep->name . "<br>"; 
+echo "legs: " . $sheep->legs . "<br>"; 
+echo "cold blooded: " . $sheep->cold_blooded . "<br>"; 
+echo "<br>";
 
-echo "Name : ".$buduk -> getName()."<br>";
-echo "legs : ".$buduk->legs."<br>";
-echo "cold blooded : ".$buduk -> cold_blooded()."<br>";
-echo "Jump : ".$buduk -> jump()."<br><br>";
+$kodok = new Frog("buduk");
 
-$sungokong = new ape();
-$sungokong -> setName("kera sakti");
+echo "Name: " . $kodok->name . "<br>";
+echo "legs: " . $kodok->legs . "<br>"; 
+echo "cold blooded: " . $kodok->cold_blooded . "<br>"; 
+echo "Jump : " . $kodok->jump();
+echo "<br><br>";
 
-echo "Name : ".$sungokong -> getName()."<br>";
-echo "legs : ".$sungokong -> legs."<br>";
-echo "cold blooded : ".$sungokong -> cold_blooded()."<br>";
-echo "Yell : ".$sungokong -> yell();
+$sungokong = new Ape("sungokong");
+
+echo "Name: " . $sungokong->name . "<br>";
+echo "legs: " . $sungokong->legs . "<br>"; 
+echo "cold blooded: " . $sungokong->cold_blooded . "<br>";
+echo "Yell : " . $sungokong->yell();
+
+?>
